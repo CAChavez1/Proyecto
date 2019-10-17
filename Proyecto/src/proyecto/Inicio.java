@@ -29,15 +29,15 @@ public class Inicio extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         label1 = new java.awt.Label();
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenuItem1 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-        jMenuItem8 = new javax.swing.JMenuItem();
-        jMenu2 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
+        mnuNeuronas = new javax.swing.JMenu();
+        mniPartes = new javax.swing.JMenuItem();
+        mniFunciones = new javax.swing.JMenuItem();
+        mniCarac = new javax.swing.JMenuItem();
+        mnuCelulasGliales = new javax.swing.JMenu();
+        mniSchwann = new javax.swing.JMenuItem();
+        mniOli = new javax.swing.JMenuItem();
+        mniMicroglia = new javax.swing.JMenuItem();
+        mniAstrocitos = new javax.swing.JMenuItem();
 
         jMenuItem5.setText("jMenuItem5");
 
@@ -66,56 +66,56 @@ public class Inicio extends javax.swing.JFrame {
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
-        jMenu1.setText("Neuronas");
+        mnuNeuronas.setText("Neuronas");
 
-        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem1.setText("Partes de la neurona ");
-        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+        mniPartes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniPartes.setText("Partes de la neurona ");
+        mniPartes.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem1ActionPerformed(evt);
+                mniPartesActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem1);
+        mnuNeuronas.add(mniPartes);
 
-        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem7.setText("Funciones de la neurona ");
-        jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
+        mniFunciones.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniFunciones.setText("Funciones de la neurona ");
+        mniFunciones.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem7ActionPerformed(evt);
+                mniFuncionesActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem7);
+        mnuNeuronas.add(mniFunciones);
 
-        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem8.setText("Partes de la neurona");
-        jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
+        mniCarac.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Z, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniCarac.setText("Caracterisiticas Morfologicas de la Neurona ");
+        mniCarac.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem8ActionPerformed(evt);
+                mniCaracActionPerformed(evt);
             }
         });
-        jMenu1.add(jMenuItem8);
+        mnuNeuronas.add(mniCarac);
 
-        jMenuBar1.add(jMenu1);
+        jMenuBar1.add(mnuNeuronas);
 
-        jMenu2.setText("Células gliales");
+        mnuCelulasGliales.setText("Celulas gliales");
 
-        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem2.setText("Células de Schwann");
-        jMenu2.add(jMenuItem2);
+        mniSchwann.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniSchwann.setText("Celulas de Schwann");
+        mnuCelulasGliales.add(mniSchwann);
 
-        jMenuItem3.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem3.setText("Oligondedrocitos");
-        jMenu2.add(jMenuItem3);
+        mniOli.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniOli.setText("Oligondedrocitos");
+        mnuCelulasGliales.add(mniOli);
 
-        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem4.setText("Microglía");
-        jMenu2.add(jMenuItem4);
+        mniMicroglia.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniMicroglia.setText("Microglía");
+        mnuCelulasGliales.add(mniMicroglia);
 
-        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
-        jMenuItem6.setText("Astrocitos");
-        jMenu2.add(jMenuItem6);
+        mniAstrocitos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
+        mniAstrocitos.setText("Astrocitos");
+        mnuCelulasGliales.add(mniAstrocitos);
 
-        jMenuBar1.add(jMenu2);
+        jMenuBar1.add(mnuCelulasGliales);
 
         setJMenuBar(jMenuBar1);
 
@@ -132,7 +132,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addGap(44, 44, 44)
                         .addComponent(jLabel2))
                     .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(82, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -144,23 +144,23 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 69, Short.MAX_VALUE))
+                .addGap(0, 67, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
+    private void mniFuncionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniFuncionesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem7ActionPerformed
+    }//GEN-LAST:event_mniFuncionesActionPerformed
 
-    private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
+    private void mniCaracActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCaracActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem8ActionPerformed
+    }//GEN-LAST:event_mniCaracActionPerformed
 
-    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+    private void mniPartesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniPartesActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem1ActionPerformed
+    }//GEN-LAST:event_mniPartesActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,19 +200,19 @@ public class Inicio extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
     private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JMenuItem jMenuItem1;
-    private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
-    private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
     private java.awt.Label label1;
+    private javax.swing.JMenuItem mniAstrocitos;
+    private javax.swing.JMenuItem mniCarac;
+    private javax.swing.JMenuItem mniFunciones;
+    private javax.swing.JMenuItem mniMicroglia;
+    private javax.swing.JMenuItem mniOli;
+    private javax.swing.JMenuItem mniPartes;
+    private javax.swing.JMenuItem mniSchwann;
+    private javax.swing.JMenu mnuCelulasGliales;
+    private javax.swing.JMenu mnuNeuronas;
     // End of variables declaration//GEN-END:variables
 }
