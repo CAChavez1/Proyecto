@@ -1,4 +1,4 @@
-package proyecto;
+
 
 import java.awt.Color;
 
@@ -9,7 +9,11 @@ import java.awt.Color;
 public class Inicio extends javax.swing.JFrame {
     public Inicio() {
         initComponents();
+        this.setLocationRelativeTo(null);
     this.getContentPane().setBackground(Color.darkGray); 
+    this.setDefaultCloseOperation(Inicio.DO_NOTHING_ON_CLOSE);
+    
+    
        
     }
 
@@ -23,11 +27,12 @@ public class Inicio extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuItem5 = new javax.swing.JMenuItem();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
+        lbl002 = new javax.swing.JLabel();
+        lbl001 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaSistemaNervioso = new javax.swing.JTextArea();
         label1 = new java.awt.Label();
+        btnSalir = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuNeuronas = new javax.swing.JMenu();
         mniPartes = new javax.swing.JMenuItem();
@@ -45,28 +50,40 @@ public class Inicio extends javax.swing.JFrame {
         setBackground(new java.awt.Color(0, 0, 0));
         setResizable(false);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen002.jpg"))); // NOI18N
+        lbl002.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen002.jpg"))); // NOI18N
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen001.jpg"))); // NOI18N
+        lbl001.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen001.jpg"))); // NOI18N
 
-        jTextArea1.setEditable(false);
-        jTextArea1.setBackground(new java.awt.Color(102, 102, 102));
-        jTextArea1.setColumns(20);
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Texto de prueba");
-        jTextArea1.setWrapStyleWord(true);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaSistemaNervioso.setEditable(false);
+        txaSistemaNervioso.setBackground(new java.awt.Color(102, 102, 102));
+        txaSistemaNervioso.setColumns(20);
+        txaSistemaNervioso.setLineWrap(true);
+        txaSistemaNervioso.setRows(5);
+        txaSistemaNervioso.setText("Texto de prueba");
+        txaSistemaNervioso.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txaSistemaNervioso);
 
         label1.setAlignment(java.awt.Label.CENTER);
         label1.setBackground(new java.awt.Color(0, 102, 102));
         label1.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
         label1.setText("Células del sistema nervioso");
 
+        btnSalir.setText("Salir");
+        btnSalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSalirActionPerformed(evt);
+            }
+        });
+
         jMenuBar1.setBackground(new java.awt.Color(255, 255, 255));
         jMenuBar1.setForeground(new java.awt.Color(255, 255, 255));
 
         mnuNeuronas.setText("Neuronas");
+        mnuNeuronas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuNeuronasActionPerformed(evt);
+            }
+        });
 
         mniPartes.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         mniPartes.setText("Partes de la neurona ");
@@ -128,11 +145,15 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1)
+                        .addComponent(lbl002)
                         .addGap(44, 44, 44)
-                        .addComponent(jLabel2))
+                        .addComponent(lbl001))
                     .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(81, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btnSalir)
+                .addGap(39, 39, 39))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -142,9 +163,11 @@ public class Inicio extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(0, 67, Short.MAX_VALUE))
+                    .addComponent(lbl002)
+                    .addComponent(lbl001, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addComponent(btnSalir)
+                .addGap(0, 26, Short.MAX_VALUE))
         );
 
         pack();
@@ -161,6 +184,14 @@ public class Inicio extends javax.swing.JFrame {
     private void mniPartesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniPartesActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mniPartesActionPerformed
+
+    private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
+       System.exit(0);
+    }//GEN-LAST:event_btnSalirActionPerformed
+
+    private void mnuNeuronasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuNeuronasActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuNeuronasActionPerformed
 
     /**
      * @param args the command line arguments
@@ -198,13 +229,13 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JButton btnSalir;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     private java.awt.Label label1;
+    private javax.swing.JLabel lbl001;
+    private javax.swing.JLabel lbl002;
     private javax.swing.JMenuItem mniAstrocitos;
     private javax.swing.JMenuItem mniCarac;
     private javax.swing.JMenuItem mniFunciones;
@@ -214,5 +245,6 @@ public class Inicio extends javax.swing.JFrame {
     private javax.swing.JMenuItem mniSchwann;
     private javax.swing.JMenu mnuCelulasGliales;
     private javax.swing.JMenu mnuNeuronas;
+    private javax.swing.JTextArea txaSistemaNervioso;
     // End of variables declaration//GEN-END:variables
 }

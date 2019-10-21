@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,9 @@ public class FrmAstrocitos extends javax.swing.JFrame {
      */
     public FrmAstrocitos() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(Color.darkGray);
+        this.setDefaultCloseOperation(FrmAstrocitos.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -27,18 +33,18 @@ public class FrmAstrocitos extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
+        txaAstrocitos = new javax.swing.JTextArea();
+        lbl005 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaAstrocitos.setColumns(20);
+        txaAstrocitos.setRows(5);
+        jScrollPane1.setViewportView(txaAstrocitos);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen005.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        lbl005.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen005.jpg"))); // NOI18N
+        lbl005.setText("jLabel1");
 
         btnRegresar.setText("Regresar");
 
@@ -53,7 +59,7 @@ public class FrmAstrocitos extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnRegresar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl005, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(9, 9, 9)))
                 .addContainerGap())
         );
@@ -66,7 +72,7 @@ public class FrmAstrocitos extends javax.swing.JFrame {
                         .addComponent(jScrollPane1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl005, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
                         .addComponent(btnRegresar)))
                 .addContainerGap())
@@ -112,8 +118,8 @@ public class FrmAstrocitos extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lbl005;
+    private javax.swing.JTextArea txaAstrocitos;
     // End of variables declaration//GEN-END:variables
 }

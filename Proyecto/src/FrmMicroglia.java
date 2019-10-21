@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,9 @@ public class FrmMicroglia extends javax.swing.JFrame {
      */
     public FrmMicroglia() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(Color.darkGray);
+        this.setDefaultCloseOperation(FrmMicroglia.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -27,20 +33,20 @@ public class FrmMicroglia extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaMircoglia = new javax.swing.JTextArea();
         btnRegresar = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        lbl006 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaMircoglia.setColumns(20);
+        txaMircoglia.setRows(5);
+        jScrollPane1.setViewportView(txaMircoglia);
 
         btnRegresar.setText("Regresar");
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen006.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        lbl006.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen006.png"))); // NOI18N
+        lbl006.setText("jLabel1");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -53,7 +59,7 @@ public class FrmMicroglia extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnRegresar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl006, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(14, 14, 14)))
                 .addContainerGap())
         );
@@ -64,7 +70,7 @@ public class FrmMicroglia extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl006, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
                         .addComponent(btnRegresar)))
                 .addContainerGap())
@@ -110,8 +116,8 @@ public class FrmMicroglia extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lbl006;
+    private javax.swing.JTextArea txaMircoglia;
     // End of variables declaration//GEN-END:variables
 }

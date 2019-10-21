@@ -1,3 +1,6 @@
+
+import java.awt.Color;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,6 +18,9 @@ public class FrmOli extends javax.swing.JFrame {
      */
     public FrmOli() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.getContentPane().setBackground(Color.darkGray);
+        this.setDefaultCloseOperation(FrmOli.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -27,18 +33,18 @@ public class FrmOli extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jLabel1 = new javax.swing.JLabel();
+        txaOli = new javax.swing.JTextArea();
+        lbl004 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaOli.setColumns(20);
+        txaOli.setRows(5);
+        jScrollPane1.setViewportView(txaOli);
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen004.png"))); // NOI18N
-        jLabel1.setText("jLabel1");
+        lbl004.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen004.png"))); // NOI18N
+        lbl004.setText("jLabel1");
 
         btnRegresar.setText("Regresar");
 
@@ -55,7 +61,7 @@ public class FrmOli extends javax.swing.JFrame {
                         .addComponent(btnRegresar))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(26, 26, 26)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl004, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
@@ -65,7 +71,7 @@ public class FrmOli extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(lbl004, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
                         .addComponent(btnRegresar))
                     .addComponent(jScrollPane1))
@@ -112,8 +118,8 @@ public class FrmOli extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegresar;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JLabel lbl004;
+    private javax.swing.JTextArea txaOli;
     // End of variables declaration//GEN-END:variables
 }

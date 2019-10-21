@@ -18,7 +18,9 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
      */
     public FrmPrtNeurona() {
         initComponents();
+        this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.darkGray);
+        this.setDefaultCloseOperation(FrmPrtNeurona.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -31,16 +33,16 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
+        txaPrtNeurona = new javax.swing.JTextArea();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
+        txaPrtNeurona.setColumns(20);
+        txaPrtNeurona.setRows(5);
+        jScrollPane1.setViewportView(txaPrtNeurona);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Imagen000.jpg"))); // NOI18N
 
@@ -127,6 +129,6 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextArea txaPrtNeurona;
     // End of variables declaration//GEN-END:variables
 }
