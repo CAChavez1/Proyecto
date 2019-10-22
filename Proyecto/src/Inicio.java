@@ -33,6 +33,7 @@ public class Inicio extends javax.swing.JFrame {
         txaSistemaNervioso = new javax.swing.JTextArea();
         label1 = new java.awt.Label();
         btnSalir = new javax.swing.JButton();
+        btnAcercaDe = new javax.swing.JButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         mnuNeuronas = new javax.swing.JMenu();
         mniPartes = new javax.swing.JMenuItem();
@@ -72,6 +73,13 @@ public class Inicio extends javax.swing.JFrame {
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSalirActionPerformed(evt);
+            }
+        });
+
+        btnAcercaDe.setText("Acerca de");
+        btnAcercaDe.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAcercaDeActionPerformed(evt);
             }
         });
 
@@ -118,18 +126,38 @@ public class Inicio extends javax.swing.JFrame {
 
         mniSchwann.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_C, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         mniSchwann.setText("Celulas de Schwann");
+        mniSchwann.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniSchwannActionPerformed(evt);
+            }
+        });
         mnuCelulasGliales.add(mniSchwann);
 
         mniOli.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_O, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         mniOli.setText("Oligondedrocitos");
+        mniOli.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniOliActionPerformed(evt);
+            }
+        });
         mnuCelulasGliales.add(mniOli);
 
         mniMicroglia.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         mniMicroglia.setText("Microglía");
+        mniMicroglia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniMicrogliaActionPerformed(evt);
+            }
+        });
         mnuCelulasGliales.add(mniMicroglia);
 
         mniAstrocitos.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_A, java.awt.event.InputEvent.ALT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         mniAstrocitos.setText("Astrocitos");
+        mniAstrocitos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mniAstrocitosActionPerformed(evt);
+            }
+        });
         mnuCelulasGliales.add(mniAstrocitos);
 
         jMenuBar1.add(mnuCelulasGliales);
@@ -151,7 +179,9 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(81, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap()
+                .addComponent(btnAcercaDe)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(btnSalir)
                 .addGap(39, 39, 39))
         );
@@ -166,7 +196,9 @@ public class Inicio extends javax.swing.JFrame {
                     .addComponent(lbl002)
                     .addComponent(lbl001, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(btnSalir)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSalir)
+                    .addComponent(btnAcercaDe))
                 .addGap(0, 26, Short.MAX_VALUE))
         );
 
@@ -174,15 +206,18 @@ public class Inicio extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mniFuncionesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniFuncionesActionPerformed
-        // TODO add your handling code here:
+        FrmFncnsNeurona mniPartes = new FrmFncnsNeurona();
+        mniPartes.setVisible(true);
     }//GEN-LAST:event_mniFuncionesActionPerformed
 
     private void mniCaracActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniCaracActionPerformed
-        // TODO add your handling code here:
+        FrmCaracMorNeurona mniPartes = new FrmCaracMorNeurona();
+        mniPartes.setVisible(true);
     }//GEN-LAST:event_mniCaracActionPerformed
 
     private void mniPartesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniPartesActionPerformed
-        // TODO add your handling code here:
+        FrmPrtNeurona mniPartes = new FrmPrtNeurona();
+        mniPartes.setVisible(true);
     }//GEN-LAST:event_mniPartesActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
@@ -192,6 +227,31 @@ public class Inicio extends javax.swing.JFrame {
     private void mnuNeuronasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuNeuronasActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_mnuNeuronasActionPerformed
+
+    private void mniSchwannActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniSchwannActionPerformed
+        FrmCelSchwann mniPartes = new FrmCelSchwann();
+        mniPartes.setVisible(true);
+    }//GEN-LAST:event_mniSchwannActionPerformed
+
+    private void mniOliActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniOliActionPerformed
+        FrmOli mniPartes = new FrmOli();
+        mniPartes.setVisible(true);
+    }//GEN-LAST:event_mniOliActionPerformed
+
+    private void mniMicrogliaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniMicrogliaActionPerformed
+        FrmMicroglia mniPartes = new FrmMicroglia();
+        mniPartes.setVisible(true);
+    }//GEN-LAST:event_mniMicrogliaActionPerformed
+
+    private void mniAstrocitosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mniAstrocitosActionPerformed
+        FrmAstrocitos mniPartes = new FrmAstrocitos();
+        mniPartes.setVisible(true);
+    }//GEN-LAST:event_mniAstrocitosActionPerformed
+
+    private void btnAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercaDeActionPerformed
+        FrmAcercaDe btnAcercaDe = new FrmAcercaDe();
+        btnAcercaDe.setVisible(true);
+    }//GEN-LAST:event_btnAcercaDeActionPerformed
 
     /**
      * @param args the command line arguments
@@ -229,6 +289,7 @@ public class Inicio extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAcercaDe;
     private javax.swing.JButton btnSalir;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem5;
