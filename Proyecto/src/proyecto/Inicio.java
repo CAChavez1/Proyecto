@@ -1,3 +1,5 @@
+package proyecto;
+
 
 
 import java.awt.Color;
@@ -58,16 +60,18 @@ public class Inicio extends javax.swing.JFrame {
         txaSistemaNervioso.setEditable(false);
         txaSistemaNervioso.setBackground(new java.awt.Color(102, 102, 102));
         txaSistemaNervioso.setColumns(20);
+        txaSistemaNervioso.setForeground(new java.awt.Color(255, 255, 255));
         txaSistemaNervioso.setLineWrap(true);
         txaSistemaNervioso.setRows(5);
-        txaSistemaNervioso.setText("Texto de prueba");
+        txaSistemaNervioso.setText("¿Qué tipos de células son existentes dentro del sistema nervioso?\n\nEn el sistema nervioso son existentes dos tipos de células las cuales son las neuronas que tienen la capacidad de comunicarse con precisión, rapidez y a larga distancia con otras células, ya sean nerviosas, musculares o glandulares. A través de las neuronas se transmiten señales eléctricas denominadas impulsos nerviosos. La conexión entre una neurona y otra se denomina sinapsis. También son existentes las células de glial o células gliales que desempeñan, de forma principal, la función de soporte de las neuronas; además intervienen activamente en el procesamiento cerebral de la información en el organismo.\n");
         txaSistemaNervioso.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txaSistemaNervioso);
 
         label1.setAlignment(java.awt.Label.CENTER);
         label1.setBackground(new java.awt.Color(0, 102, 102));
-        label1.setFont(new java.awt.Font("Lucida Fax", 0, 12)); // NOI18N
-        label1.setText("Células del sistema nervioso");
+        label1.setFont(new java.awt.Font("Lucida Fax", 1, 14)); // NOI18N
+        label1.setForeground(new java.awt.Color(255, 255, 255));
+        label1.setText("Células del Sistema Nervioso");
 
         btnSalir.setText("Salir");
         btnSalir.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +180,7 @@ public class Inicio extends javax.swing.JFrame {
                         .addComponent(lbl002)
                         .addGap(44, 44, 44)
                         .addComponent(lbl001))
-                    .addComponent(label1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
                 .addContainerGap(81, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap()
@@ -187,7 +191,8 @@ public class Inicio extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(99, Short.MAX_VALUE)
                 .addComponent(label1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 181, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,7 +204,7 @@ public class Inicio extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnSalir)
                     .addComponent(btnAcercaDe))
-                .addGap(0, 26, Short.MAX_VALUE))
+                .addGap(28, 28, 28))
         );
 
         pack();
@@ -250,7 +255,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btnAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercaDeActionPerformed
         FrmAcercaDe btnAcercaDe = new FrmAcercaDe();
-        btnAcercaDe.setVisible(true);
+        btnAcercaDe.setVisible(true);  
     }//GEN-LAST:event_btnAcercaDeActionPerformed
 
     /**

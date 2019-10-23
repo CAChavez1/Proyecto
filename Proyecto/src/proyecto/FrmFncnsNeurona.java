@@ -1,3 +1,5 @@
+package proyecto;
+
 
 import java.awt.Color;
 
@@ -38,9 +40,16 @@ public class FrmFncnsNeurona extends javax.swing.JFrame {
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
+        txaFncnsNeurona.setEditable(false);
+        txaFncnsNeurona.setBackground(new java.awt.Color(102, 102, 102));
         txaFncnsNeurona.setColumns(20);
+        txaFncnsNeurona.setForeground(new java.awt.Color(255, 255, 255));
+        txaFncnsNeurona.setLineWrap(true);
         txaFncnsNeurona.setRows(5);
+        txaFncnsNeurona.setText("Una neurona es una célula componente principal del sistema nervioso, cuya función principal es recibir, procesar y transmitir información a través de señales químicas y eléctricas gracias a la excitabilidad eléctrica de su membrana plasmática. Están especializadas en la recepción de estímulos y conducción del impulso nervioso (en forma de potencial de acción) entre ellas mediante conexiones llamadas sinapsis, o con otros tipos de células como, por ejemplo, las fibras musculares de la placa motora. Altamente diferenciadas, la mayoría de las neuronas no se dividen una vez alcanzada su madurez; no obstante, una minoría sí lo hace.");
+        txaFncnsNeurona.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txaFncnsNeurona);
 
         lbl008.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen008.jpg"))); // NOI18N
@@ -88,6 +97,7 @@ public class FrmFncnsNeurona extends javax.swing.JFrame {
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         Inicio btnRegresar = new Inicio();
         btnRegresar.setVisible(true); 
+        dispose();
     }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**

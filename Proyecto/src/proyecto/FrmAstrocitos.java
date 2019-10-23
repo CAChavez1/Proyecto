@@ -1,3 +1,5 @@
+package proyecto;
+
 
 import java.awt.Color;
 
@@ -11,16 +13,16 @@ import java.awt.Color;
  *
  * @author 18PUERIB0424
  */
-public class FrmMicroglia extends javax.swing.JFrame {
+public class FrmAstrocitos extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmMicroglia
+     * Creates new form FrmAstrocitos
      */
-    public FrmMicroglia() {
+    public FrmAstrocitos() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.darkGray);
-        this.setDefaultCloseOperation(FrmMicroglia.DO_NOTHING_ON_CLOSE);
+        this.setDefaultCloseOperation(FrmAstrocitos.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -33,20 +35,31 @@ public class FrmMicroglia extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        txaMircoglia = new javax.swing.JTextArea();
+        txaAstrocitos = new javax.swing.JTextArea();
+        lbl005 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
-        lbl006 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        txaMircoglia.setColumns(20);
-        txaMircoglia.setRows(5);
-        jScrollPane1.setViewportView(txaMircoglia);
+        txaAstrocitos.setBackground(new java.awt.Color(102, 102, 102));
+        txaAstrocitos.setColumns(20);
+        txaAstrocitos.setForeground(new java.awt.Color(255, 255, 255));
+        txaAstrocitos.setLineWrap(true);
+        txaAstrocitos.setRows(5);
+        txaAstrocitos.setText("Los astrocitos son las principales y más numerosas células gliales (de ahí que se les conozca también, genéricamente, como astroglía), sobre todo en los organismos más complejos. Se trata de células de linaje neuroectodérmico que asumen un elevado número de funciones clave para la realización de la actividad nerviosa.");
+        txaAstrocitos.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txaAstrocitos);
+
+        lbl005.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen005.jpg"))); // NOI18N
+        lbl005.setText("jLabel1");
 
         btnRegresar.setText("Regresar");
-
-        lbl006.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen006.png"))); // NOI18N
-        lbl006.setText("jLabel1");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -55,29 +68,37 @@ public class FrmMicroglia extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnRegresar, javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lbl006, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(14, 14, 14)))
+                        .addComponent(lbl005, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(9, 9, 9)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(lbl006, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 193, Short.MAX_VALUE)
+                        .addContainerGap()
+                        .addComponent(jScrollPane1))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(lbl005, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
                         .addComponent(btnRegresar)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        Inicio btnRegresar = new Inicio();
+        btnRegresar.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -96,20 +117,20 @@ public class FrmMicroglia extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmMicroglia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmMicroglia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmMicroglia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmMicroglia.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmMicroglia().setVisible(true);
+                new FrmAstrocitos().setVisible(true);
             }
         });
     }
@@ -117,7 +138,7 @@ public class FrmMicroglia extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegresar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl006;
-    private javax.swing.JTextArea txaMircoglia;
+    private javax.swing.JLabel lbl005;
+    private javax.swing.JTextArea txaAstrocitos;
     // End of variables declaration//GEN-END:variables
 }

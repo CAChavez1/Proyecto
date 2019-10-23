@@ -150,7 +150,7 @@
                       <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
                       <Component id="lbl001" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <Component id="label1" alignment="0" max="32767" attributes="0"/>
+                  <Component id="label1" alignment="0" pref="0" max="32767" attributes="0"/>
               </Group>
               <EmptySpace pref="81" max="32767" attributes="0"/>
           </Group>
@@ -165,7 +165,8 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Group type="102" alignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="99" max="32767" attributes="0"/>
               <Component id="label1" min="-2" pref="41" max="-2" attributes="0"/>
               <EmptySpace max="-2" attributes="0"/>
               <Component id="jScrollPane1" min="-2" pref="181" max="-2" attributes="0"/>
@@ -179,7 +180,7 @@
                   <Component id="btnSalir" min="-2" max="-2" attributes="0"/>
                   <Component id="btnAcercaDe" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace min="0" pref="26" max="32767" attributes="0"/>
+              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -213,9 +214,12 @@
               <Color blue="66" green="66" red="66" type="rgb"/>
             </Property>
             <Property name="columns" type="int" value="20"/>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
             <Property name="lineWrap" type="boolean" value="true"/>
             <Property name="rows" type="int" value="5"/>
-            <Property name="text" type="java.lang.String" value="Texto de prueba"/>
+            <Property name="text" type="java.lang.String" value="&#xbf;Qu&#xe9; tipos de c&#xe9;lulas son existentes dentro del sistema nervioso?&#xa;&#xa;En el sistema nervioso son existentes dos tipos de c&#xe9;lulas las cuales son las neuronas que tienen la capacidad de comunicarse con precisi&#xf3;n, rapidez y a larga distancia con otras c&#xe9;lulas, ya sean nerviosas, musculares o glandulares. A trav&#xe9;s de las neuronas se transmiten se&#xf1;ales el&#xe9;ctricas denominadas impulsos nerviosos. La conexi&#xf3;n entre una neurona y otra se denomina sinapsis. Tambi&#xe9;n son existentes las c&#xe9;lulas de glial o c&#xe9;lulas gliales que desempe&#xf1;an, de forma principal, la funci&#xf3;n de soporte de las neuronas; adem&#xe1;s intervienen activamente en el procesamiento cerebral de la informaci&#xf3;n en el organismo.&#xa;"/>
             <Property name="wrapStyleWord" type="boolean" value="true"/>
           </Properties>
         </Component>
@@ -228,9 +232,12 @@
           <Color blue="66" green="66" red="0" type="rgb"/>
         </Property>
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-          <Font name="Lucida Fax" size="12" style="0"/>
+          <Font name="Lucida Fax" size="14" style="1"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="C&#xe9;lulas del sistema nervioso"/>
+        <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="ff" green="ff" red="ff" type="rgb"/>
+        </Property>
+        <Property name="text" type="java.lang.String" value="C&#xe9;lulas del Sistema Nervioso"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="btnSalir">

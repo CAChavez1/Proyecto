@@ -1,3 +1,5 @@
+package proyecto;
+
 
 import java.awt.Color;
 
@@ -38,15 +40,26 @@ public class FrmCelSchwann extends javax.swing.JFrame {
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
+        txaCelSchwann.setBackground(new java.awt.Color(102, 102, 102));
         txaCelSchwann.setColumns(20);
+        txaCelSchwann.setForeground(new java.awt.Color(255, 255, 255));
+        txaCelSchwann.setLineWrap(true);
         txaCelSchwann.setRows(5);
+        txaCelSchwann.setText("Las células de Schwann actualmente llamadas neurolemocitos son células gliales que se encuentran en el sistema nervioso periférico que acompañan a las neuronas durante su crecimiento y desarrollo de su función.\nSon las células de soporte de las neuronas. Igual que los oligodendrocitos, las células de Schwann envuelven los axones, pero en este caso, una célula sólo envuelve un segmento del axón. Además de formar las vainas de mielina, las células de Schwann también tienen la función de eliminar los desechos de otras células y de guiar el crecimiento de los axones cuando estos se regeneran. Para ello, las células de Schwann se disponen formando una serie de cilindros que sirven de tutores a los axones en regeneración. Si uno de los brotes axonales encuentra un cilindro, crecerá a lo largo del mismo a una velocidad de 3 a 4 mm por día. ");
+        txaCelSchwann.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txaCelSchwann);
 
         lbl007.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen007.jpg"))); // NOI18N
         lbl007.setText("jLabel1");
 
         btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -78,6 +91,12 @@ public class FrmCelSchwann extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        Inicio btnRegresar = new Inicio();
+        btnRegresar.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments

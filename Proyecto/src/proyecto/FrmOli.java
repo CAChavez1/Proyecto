@@ -1,3 +1,5 @@
+package proyecto;
+
 
 import java.awt.Color;
 
@@ -11,16 +13,16 @@ import java.awt.Color;
  *
  * @author 18PUERIB0424
  */
-public class FrmAstrocitos extends javax.swing.JFrame {
+public class FrmOli extends javax.swing.JFrame {
 
     /**
-     * Creates new form FrmAstrocitos
+     * Creates new form FrmOli
      */
-    public FrmAstrocitos() {
+    public FrmOli() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.darkGray);
-        this.setDefaultCloseOperation(FrmAstrocitos.DO_NOTHING_ON_CLOSE);
+        this.setDefaultCloseOperation(FrmOli.DO_NOTHING_ON_CLOSE);
     }
 
     /**
@@ -33,20 +35,31 @@ public class FrmAstrocitos extends javax.swing.JFrame {
     private void initComponents() {
 
         jScrollPane1 = new javax.swing.JScrollPane();
-        txaAstrocitos = new javax.swing.JTextArea();
-        lbl005 = new javax.swing.JLabel();
+        txaOli = new javax.swing.JTextArea();
+        lbl004 = new javax.swing.JLabel();
         btnRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
-        txaAstrocitos.setColumns(20);
-        txaAstrocitos.setRows(5);
-        jScrollPane1.setViewportView(txaAstrocitos);
+        txaOli.setBackground(new java.awt.Color(102, 102, 102));
+        txaOli.setColumns(20);
+        txaOli.setForeground(new java.awt.Color(255, 255, 255));
+        txaOli.setLineWrap(true);
+        txaOli.setRows(5);
+        txaOli.setText("Los oligodendrocitos, son un tipo de células de la macroglia. Estas, son más pequeñas que los astrocitos y con pocas prolongaciones. Además de la función de sostén y unión, los oligodendrocitos desempeñan otra importante función, que es la de formar la vaina de mielina en el sistema nervioso central y exterior.");
+        txaOli.setWrapStyleWord(true);
+        jScrollPane1.setViewportView(txaOli);
 
-        lbl005.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen005.jpg"))); // NOI18N
-        lbl005.setText("jLabel1");
+        lbl004.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/imagen004.png"))); // NOI18N
+        lbl004.setText("jLabel1");
 
         btnRegresar.setText("Regresar");
+        btnRegresar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRegresarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -54,32 +67,40 @@ public class FrmAstrocitos extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 300, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 33, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnRegresar, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addComponent(lbl005, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(9, 9, 9)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(0, 512, Short.MAX_VALUE)
+                        .addComponent(btnRegresar))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 299, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(26, 26, 26)
+                        .addComponent(lbl004, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane1))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 279, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lbl005, javax.swing.GroupLayout.PREFERRED_SIZE, 202, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 184, Short.MAX_VALUE)
+                        .addComponent(lbl004, javax.swing.GroupLayout.PREFERRED_SIZE, 201, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 195, Short.MAX_VALUE)
                         .addComponent(btnRegresar)))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
+        Inicio btnRegresar = new Inicio();
+        btnRegresar.setVisible(true);
+        dispose();
+    }//GEN-LAST:event_btnRegresarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -98,20 +119,20 @@ public class FrmAstrocitos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmOli.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmOli.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmOli.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(FrmAstrocitos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(FrmOli.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmAstrocitos().setVisible(true);
+                new FrmOli().setVisible(true);
             }
         });
     }
@@ -119,7 +140,7 @@ public class FrmAstrocitos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegresar;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JLabel lbl005;
-    private javax.swing.JTextArea txaAstrocitos;
+    private javax.swing.JLabel lbl004;
+    private javax.swing.JTextArea txaOli;
     // End of variables declaration//GEN-END:variables
 }

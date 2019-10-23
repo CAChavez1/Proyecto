@@ -1,3 +1,5 @@
+package proyecto;
+
 
 import java.awt.Color;
 
@@ -40,8 +42,13 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        txaPrtNeurona.setBackground(new java.awt.Color(102, 102, 102));
         txaPrtNeurona.setColumns(20);
+        txaPrtNeurona.setForeground(new java.awt.Color(255, 255, 255));
+        txaPrtNeurona.setLineWrap(true);
         txaPrtNeurona.setRows(5);
+        txaPrtNeurona.setText("Los astrocitos son las principales y más numerosas células gliales (de ahí que se les conozca también, genéricamente, como astroglía), sobre todo en los organismos más complejos. Se trata de células de linaje neuroectodérmico​ que asumen un elevado número de funciones clave para la realización de la actividad nerviosa.Derivan de las células encargadas de dirigir la migración de precursores durante el desarrollo (glía radial) y se originan en las primeras etapas del desarrollo del sistema nervioso central . ");
+        txaPrtNeurona.setWrapStyleWord(true);
         jScrollPane1.setViewportView(txaPrtNeurona);
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Imagen000.jpg"))); // NOI18N
@@ -67,7 +74,7 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
                         .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
-                        .addGap(0, 11, Short.MAX_VALUE)))
+                        .addGap(0, 12, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -76,10 +83,12 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 196, Short.MAX_VALUE)
-                        .addComponent(jButton1))
-                    .addComponent(jScrollPane1))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 197, Short.MAX_VALUE)
+                        .addComponent(jButton1)))
                 .addContainerGap())
         );
 
@@ -87,7 +96,9 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        Inicio btnRegresar = new Inicio();
+        btnRegresar.setVisible(true); 
+        dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
