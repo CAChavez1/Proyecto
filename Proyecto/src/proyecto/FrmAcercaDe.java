@@ -1,6 +1,5 @@
 package proyecto;
 
-
 import java.awt.Color;
 
 /*
@@ -8,7 +7,6 @@ import java.awt.Color;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 18PUERIB0424
@@ -20,7 +18,7 @@ public class FrmAcercaDe extends javax.swing.JFrame {
      */
     public FrmAcercaDe() {
         initComponents();
-        this.setLocationRelativeTo(null); 
+        this.setLocationRelativeTo(null);
         this.getContentPane().setBackground(Color.darkGray);
         this.setDefaultCloseOperation(FrmFncnsNeurona.DO_NOTHING_ON_CLOSE);
     }
@@ -41,6 +39,7 @@ public class FrmAcercaDe extends javax.swing.JFrame {
         btnManualTecnico = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         txaIntegrantes.setEditable(false);
         txaIntegrantes.setBackground(new java.awt.Color(102, 102, 102));
@@ -97,7 +96,7 @@ public class FrmAcercaDe extends javax.swing.JFrame {
 
     private void btnRegresarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegresarActionPerformed
         Inicio btnRegresar = new Inicio();
-        btnRegresar.setVisible(true); 
+        btnRegresar.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnRegresarActionPerformed
 

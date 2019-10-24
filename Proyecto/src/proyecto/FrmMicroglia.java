@@ -1,6 +1,5 @@
 package proyecto;
 
-
 import java.awt.Color;
 
 /*
@@ -8,7 +7,6 @@ import java.awt.Color;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 18PUERIB0424
@@ -42,6 +40,7 @@ public class FrmMicroglia extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        txaMircoglia.setEditable(false);
         txaMircoglia.setBackground(new java.awt.Color(102, 102, 102));
         txaMircoglia.setColumns(20);
         txaMircoglia.setForeground(new java.awt.Color(255, 255, 255));

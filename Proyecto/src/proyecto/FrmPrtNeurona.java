@@ -1,6 +1,5 @@
 package proyecto;
 
-
 import java.awt.Color;
 
 /*
@@ -8,7 +7,6 @@ import java.awt.Color;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 /**
  *
  * @author 18PUERIB0424
@@ -42,6 +40,7 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
 
+        txaPrtNeurona.setEditable(false);
         txaPrtNeurona.setBackground(new java.awt.Color(102, 102, 102));
         txaPrtNeurona.setColumns(20);
         txaPrtNeurona.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,7 +96,7 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         Inicio btnRegresar = new Inicio();
-        btnRegresar.setVisible(true); 
+        btnRegresar.setVisible(true);
         dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
