@@ -1,7 +1,5 @@
 package proyecto;
 
-
-
 import java.awt.Color;
 
 /**
@@ -9,14 +7,13 @@ import java.awt.Color;
  * @author 18PROGB0073
  */
 public class Inicio extends javax.swing.JFrame {
+
     public Inicio() {
         initComponents();
         this.setLocationRelativeTo(null);
-    this.getContentPane().setBackground(Color.darkGray); 
-    this.setDefaultCloseOperation(Inicio.DO_NOTHING_ON_CLOSE);
-    
-    
-       
+        this.getContentPane().setBackground(Color.darkGray);
+        this.setDefaultCloseOperation(Inicio.DO_NOTHING_ON_CLOSE);
+
     }
 
     /**
@@ -226,7 +223,7 @@ public class Inicio extends javax.swing.JFrame {
     }//GEN-LAST:event_mniPartesActionPerformed
 
     private void btnSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSalirActionPerformed
-       System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_btnSalirActionPerformed
 
     private void mnuNeuronasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuNeuronasActionPerformed
@@ -255,7 +252,7 @@ public class Inicio extends javax.swing.JFrame {
 
     private void btnAcercaDeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcercaDeActionPerformed
         FrmAcercaDe btnAcercaDe = new FrmAcercaDe();
-        btnAcercaDe.setVisible(true);  
+        btnAcercaDe.setVisible(true);
     }//GEN-LAST:event_btnAcercaDeActionPerformed
 
     /**
