@@ -95,11 +95,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Manual Usuario.PDF"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManualActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="btnManualTecnico">
       <Properties>
         <Property name="text" type="java.lang.String" value="Manual Tecnico.PDF"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnManualTecnicoActionPerformed"/>
+      </Events>
     </Component>
   </SubComponents>
 </Form>

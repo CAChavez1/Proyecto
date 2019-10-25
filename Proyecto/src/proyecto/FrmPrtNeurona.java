@@ -130,7 +130,7 @@ public class FrmPrtNeurona extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new FrmPrtNeurona().setVisible(true);
+                new FrmPrtNeurona().setVisible(true); 
             }
         });
     }

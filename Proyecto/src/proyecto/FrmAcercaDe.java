@@ -57,8 +57,18 @@ public class FrmAcercaDe extends javax.swing.JFrame {
         });
 
         btnManual.setText("Manual Usuario.PDF");
+        btnManual.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManualActionPerformed(evt);
+            }
+        });
 
         btnManualTecnico.setText("Manual Tecnico.PDF");
+        btnManualTecnico.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnManualTecnicoActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -99,6 +109,16 @@ public class FrmAcercaDe extends javax.swing.JFrame {
         btnRegresar.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnRegresarActionPerformed
+
+    private void btnManualActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManualActionPerformed
+      ManualUsuario Manual = new ManualUsuario();
+      Manual.cargarArchivo(); 
+    }//GEN-LAST:event_btnManualActionPerformed
+
+    private void btnManualTecnicoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManualTecnicoActionPerformed
+      ManualTecnico Manual = new ManualTecnico();
+      Manual.cargarArchivo();
+    }//GEN-LAST:event_btnManualTecnicoActionPerformed
 
     /**
      * @param args the command line arguments
